@@ -1,0 +1,8 @@
+<ul>
+<% @demo.each do |item| %>
+ <li>
+   <h4><a href="/items/<%= item.id %>"><%=h item.name %></a></h4>
+   <p>Created: <%=h item.created_at %></p>
+ </li>
+<% end %>
+</ul>

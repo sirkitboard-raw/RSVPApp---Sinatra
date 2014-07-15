@@ -35,9 +35,9 @@ post '/' do
   demo.email = params[:email]
   demo.created_at = Time.now
   if demo.save
-    "success!"
+    redirect '/'
   else
-    "fail! #{@results.errors.to_s}"
+    redirect '/'
   end
 end
 
