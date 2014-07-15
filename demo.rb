@@ -4,10 +4,12 @@ require 'data_mapper'
 
 class Item
   include DataMapper::Resource
-  property :name, String, :key => true
+  propery :id, Serial, :key => true
+  property :name, String,
   property :nopeople, Integer
   property :phno, String
   property :email, String
+  property :created_at, DateTime
 end
 
 configure do
@@ -19,15 +21,20 @@ end
 get '/' do
   @demo = Item.all
   p @demo
-  haml :view
+  erb:home
 end
 
 post '/' do
   params.each do |y|
     puts y
   end
-  @demo = Item.new params
-  if @demo.save
+  demo = Item.new
+  demo.name = params[:name]
+  demo.phno = params[:phno]
+  demo.nopeople = params[:nopeople]
+  demo.email = params[:email]
+  demo.created_at = Time.now
+  if demo.save
     "success!"
   else
     "fail! #{@results.errors.to_s}"

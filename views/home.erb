@@ -1,0 +1,12 @@
+<% @demo.each do |item| %>
+  <article >
+    <p>
+      <%= item.name %>
+      <span><a href="/<%= item.id %>">[edit]</a></span>
+    </p>
+    <p class="links">
+      <a href="/<%= item.id %>/complete">&#8623;</a>
+    </p>
+    <p class="meta">Created: <%= item.created_at %></p>
+  </article>
+<% end %>
