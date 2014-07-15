@@ -25,8 +25,8 @@ get '/' do
 end
 
 get '/:id' do
-  demo = Item.get params[:id]
-  p @demo
+  item = Item.get params[:id]
+  p item
   erb :view
 end
 
