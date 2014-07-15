@@ -24,6 +24,12 @@ get '/' do
   erb:home
 end
 
+get '/:id' do
+  @demo = Item.get params[:id]
+  p @demo
+  erb:view
+end
+
 post '/' do
   params.each do |y|
     puts y
@@ -39,5 +45,16 @@ post '/' do
   else
     redirect '/'
   end
+end
+
+delete '/:id' do
+  n = Item.get params[:id]
+  n.destroy
+  redirect '/'
+end
+
+get '/:id/delete' do
+  @demo = Item.get params[:id]
+  erb :delete
 end
 
