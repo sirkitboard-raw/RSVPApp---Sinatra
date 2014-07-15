@@ -4,8 +4,8 @@ require 'data_mapper'
 
 class Item
   include DataMapper::Resource
-  propery :id, Serial, :key => true
-  property :name, String,
+  property :id, Serial, :key => true
+  property :name, String
   property :nopeople, Integer
   property :phno, String
   property :email, String
