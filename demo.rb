@@ -21,13 +21,13 @@ end
 get '/' do
   @demo = Item.all
   p @demo
-  erb:home
+  erb :home
 end
 
 get '/:id' do
-  @demo = Item.get params[:id]
+  demo = Item.get params[:id]
   p @demo
-  erb:view
+  erb :view
 end
 
 post '/' do

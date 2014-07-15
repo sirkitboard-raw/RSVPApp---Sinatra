@@ -1,5 +1,4 @@
-<% @demo.each do |item| %>
-  <article >
+<article >
     <p>
       <a href="/<%= item.id %>"><%= item.name %></a><span><a href="/<%= item.id %>/delete">Delete?</a></span>
       <br>Number of People :  <%= item.nopeople %>
@@ -8,4 +7,3 @@
     </p>
     <p class="meta">Created: <%= item.created_at %></p>
   </article>
-<% end %>
