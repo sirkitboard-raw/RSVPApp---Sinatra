@@ -1,9 +1,9 @@
 <article >
     <p>
-      <a href="/<%= item.id %>"><%= item.name %></a><span><a href="/<%= item.id %>/delete">Delete?</a></span>
-      <br>Number of People :  <%= item.nopeople %>
-      <br>Phone Number :  <%= item.phno %>
-      <br>Email :  <%= item.email %>
+      <a href="/<%= @demo.id %>"><%= @demo.name %></a><span><a href="/<%= @demo.id %>/delete">Delete?</a></span>
+      <br>Number of People :  <%= @demo.nopeople %>
+      <br>Phone Number :  <%= @demo.phno %>
+      <br>Email :  <%= @demo.email %>
     </p>
-    <p class="meta">Created: <%= item.created_at %></p>
+    <p class="meta">Created: <%= @demo.created_at %></p>
   </article>

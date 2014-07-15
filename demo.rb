@@ -25,8 +25,8 @@ get '/' do
 end
 
 get '/:id' do
-  item = Item.get params[:id]
-  p item
+  @demo = Item.get params[:id]
+  p @demo
   erb :view
 end
 
@@ -48,8 +48,8 @@ post '/' do
 end
 
 delete '/:id' do
-  n = Item.get params[:id]
-  n.destroy
+  demo = Item.get params[:id]
+  demo.destroy
   redirect '/'
 end
 
