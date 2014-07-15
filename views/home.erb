@@ -16,11 +16,10 @@
 <% @demo.each do |item| %>
   <article >
     <p>
-      <%= item.name %>
-      <span><a href="/<%= item.id %>">[edit]</a></span>
-    </p>
-    <p class="links">
-      <a href="/<%= item.id %>/complete">&#8623;</a>
+      <a href="/<%= item.id %>"><%= item.name %></a>
+      <br>Number of People :  <%= item.nopeople %>
+      <br>Phone Number :  <%= item.phno %>
+      <br>Email :  <%= item.email %>
     </p>
     <p class="meta">Created: <%= item.created_at %></p>
   </article>
